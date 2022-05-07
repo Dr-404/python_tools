@@ -8,7 +8,7 @@ print("   ____     __   _____        __         ")
 print("  / ____ __/ /  / __(____ ___/ ___ ____  ")
 print(" _\ \/ // / _ \/ _// / _ / _  / -_/ __/  ")
 print("/___/\_,_/_.__/_/ /_/_//_\_,_/\__/_/     ")
-print("                                         ")
+print("                              by         ")
 print("                         +-+-+-+-+-+-+   ")
 print("                         |D|r|.|4|0|4|   ")
 print("                         +-+-+-+-+-+-+   ") 
@@ -31,22 +31,7 @@ sub_Raw= requests.get(prefix + domain_name)
 result_Raw = str(sub_Raw.text)
 
 
-# #Replacing and subsitube .org,.com,.edu with .com+newline
-# char_to_replace = {".org":".org\n",
-#                     ".com":".com\n",
-#                     ".edu":".edu\n"
-#                    }
-#
-# for key,value in char_to_replace.items():
-#     result_Raw = result_Raw.replace(key,value)
-# #result_Raw = result_Raw.replace(".org",".org\n")
-
-patterm_www = "www." + domain_name
-
-
-
-
-
+#patterm_www = "www." + domain_name
 result_filter = re.findall(pattern, result_Raw)
 result_list = []
 
@@ -65,5 +50,8 @@ for resultFinal in result_rm_duplicate:
         pass
     else:
         print(resultFinal)
+
+
+
 
 
